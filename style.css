@@ -1,0 +1,99 @@
+body{
+  background-color: #e0e0e0 !important;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+hr{
+  border-color: #bdbdbd !important;
+}
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.container h1{
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  margin-bottom: 20px;
+}
+.list-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.list-group li{
+  border-radius: 20px !important;
+  margin: 10px !important;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+}
+.list-group li span{
+  display: block;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 10px;
+  background-color: rgb(54, 54, 54);
+  color: #fff;
+}
+.spinnner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.spinnner span{
+  border: solid 1px #ccc;
+  background-color: #eee;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  cursor: pointer;
+}
+.spinnner input{
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  background-color: #ccc;
+  border: solid 1px #ccc;
+}
+.spinnner h1{
+  width: 100%;
+}
+.form-group2{
+  background-color: #428bca;
+  margin: 0 auto;
+  max-width: 550px;
+  padding:20px;
+}
+.form-group2 input{
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  margin-right: 50px;
+}
+.form-group2 span{
+  background: crimson;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+  padding: 10px;
+  height: 30px;
+  color: #fff;
+  width:30px;
+}
