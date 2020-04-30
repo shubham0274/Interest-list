@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Skills in the list</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <style>
+    body{
+      background-color: #e0e0e0;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .container h1{
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1.1px;
+      margin-bottom: 30px;
+      padding-bottom: 5px;
+      display: inline-block;
+      border-bottom: solid 2px #757575;
+    }
+    .list-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .list-group li{
+      border-radius: 20px !important;
+      margin: 10px !important;
+      font-weight: bold;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-right: 40px;
+    }
+    .list-group li span{
+      display: block;
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      border-radius: 50%;
+      font-size: 10px;
+      background-color: rgb(54, 54, 54);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Add key skills in the list</h1>
+         <div class="shoping-list">
+      <div class="form-group form-inline">
+        <input type="text" class="form-control" placeholder="Enter Your Skill">
+        <button class="btn btn-primary">Submit</button>
+      </div>
+      <ul class="list-group font-weight-bold"> 
+        
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    
+    let inputBox = document.querySelector(".form-control");
+    let btn      = document.querySelector(".btn");
+    let listWrap = document.querySelector(".list-group");
+
+    function addSkill(){
+      let li = document.createElement("li");
+      let remove = document.createElement('span');
+      remove.appendChild(document.createTextNode("X"));
+      li.appendChild(document.createTextNode(inputBox.value));
+      li.appendChild(remove);
+      listWrap.appendChild(li).classList.add('list-group-item');
+      inputBox.value = "";
+      remove.addEventListener('click',function(){
+        li.style.display = "none";
+      })
+    } 
+    function skillOnButton(){
+      if(inputBox.value.length > 0) {
+        addSkill();
+      }
+    }
+    function skillOnKeypress(e){
+      if(inputBox.value.length > 0 && e.keyCode === 13) {
+        addSkill();
+      }
+    }
+    btn.addEventListener('click', skillOnButton);
+    inputBox.addEventListener('keypress', skillOnKeypress);
+
+    </script>
+
+</body>
+</html>
